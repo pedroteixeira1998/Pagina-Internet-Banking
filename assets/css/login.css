@@ -1,0 +1,52 @@
+main{
+    background-color: var(--bg-color);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    height: 100vh;
+    gap: 15px;
+}
+
+.form-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.text-login{
+    color: var(--letras);
+}
+
+.input-login{
+    background-color: var(--bg-color);
+    border: 1px solid var(--letras);
+    border-radius: 5px;
+    height: 40px;
+    outline: none;
+    color: var(--letras);
+    font-size: 12pt;
+    padding: 10px;
+}
+
+.button-login{
+    height: 50px;
+    width: 100vh;
+    max-width: 200px;
+    border-radius: 5px;
+    color: var(--bg-color);
+    background-color: var(--letras);
+    cursor: pointer;
+}
+
+.button-login:disabled{
+    background-color: var(--button-disabled);
+    color: var(--letra-disabled);
+    cursor: auto;
+}
