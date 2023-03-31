@@ -6,19 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="./assets/JavaScript/login.js" defer></script>
     <title>Login</title>
 </head>
 <body>
     <main>
-        <form>
+        <form class='login-form' name="f1">
             <div class="login-image">
                 <img src="./assets/imagens/logo.jpg" alt="">
             </div>
             <div class="form-login">
                 <p class="text-login">Email:</p>
-                <input type="text" class="input-login" required>
+                <input type="text" class="input-login" required name="email" onblur="validacaoEmail(f1.email)"  maxlength="60">
                 <p class="text-login">Senha:</p>
-                <input type="text" class="input-login" required>
+                <input type="password" class="input-login" id="password" required>
+                <button class="seepassword" type="button"><span class="material-symbols-outlined">
+                    visibility
+                    </span></button>
             </div>
             <div>
                 <button type="submit" class="button-login" disabled>Login</button>
