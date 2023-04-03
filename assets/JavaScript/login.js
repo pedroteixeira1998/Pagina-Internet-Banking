@@ -25,7 +25,10 @@ function validacaoEmail(field) {
 const validateSenha = () =>{
     if(password.value.length >= 8){
         button.removeAttribute('disabled');
-}}
+}
+    else{
+        button.setAttribute('disabled', '');
+    }}
 
 const nextPage = (event) => {
     event.preventDefault();

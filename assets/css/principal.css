@@ -1,0 +1,38 @@
+.head-page{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: var(--bg-color);
+    gap: 25%;
+    
+}
+
+.img-agenda img{
+    width: 30%;
+    padding: 0 0 0 80%;
+}
+
+.a-agenda{
+    display: flex;
+    gap: 40%;
+}
+
+.a-agenda a{
+    text-decoration: none;
+    color: var(--letras);
+}
+
+.a-agenda a:hover{
+    text-decoration: underline;
+}
+
+.user-agenda{
+    border: 1px solid var(--letras);
+    padding: 15px 100px 15px 15px;
+    border-radius: 8px;
+    background-color: var(--letras);
+}
+
+.user-agenda p, span{
+    color: var(--bg-color);
+}
