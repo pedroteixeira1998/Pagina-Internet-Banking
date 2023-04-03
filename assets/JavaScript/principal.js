@@ -1,0 +1,1 @@
+spanPlayer.innerHTML = localStorage.getItem('client');

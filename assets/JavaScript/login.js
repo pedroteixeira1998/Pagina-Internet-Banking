@@ -1,6 +1,7 @@
 const password = document.querySelector('#password');
 const button = document.querySelector('.button-login');
 const form = document.querySelector('.login-form');
+const input = document.querySelector('.input_login');
 const eye = document.querySelector('.seepassword');
 
 function validacaoEmail(field) {
@@ -32,6 +33,8 @@ const validateSenha = () =>{
 
 const nextPage = (event) => {
     event.preventDefault();
+
+    localStorage.setItem('client', input.value);
 
     window.location = 'assets/pages/principal.html'
 }

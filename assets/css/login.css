@@ -25,7 +25,7 @@ form{
     color: var(--letras);
 }
 
-.input-login{
+.input-login, .input_login {
     background-color: var(--bg-color);
     border: 1px solid var(--letras);
     border-radius: 5px;

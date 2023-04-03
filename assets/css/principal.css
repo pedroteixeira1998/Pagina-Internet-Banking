@@ -36,3 +36,45 @@
 .user-agenda p, span{
     color: var(--bg-color);
 }
+
+main{
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.calendar{
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.grid{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.all-hours{
+    display: flex;
+    flex-direction: column;
+}
+
+.tb-hours{
+    display: flex;
+}
+
+.hour, .day{
+    border: 1px solid black;
+    padding: 30px 10px 30px 10px;
+    border-radius: 5px;
+}
+
+.hour:hover{
+    background-color: var(--letras);
+    cursor: pointer;
+}
