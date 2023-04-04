@@ -43,13 +43,16 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 100px;
 }
 
 .calendar{
     display: flex;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    width: 100vh;
     max-width: 700px;
-    margin: auto;
     padding-top: 100px;
 }
 
@@ -77,4 +80,24 @@ main{
 .hour:hover{
     background-color: var(--letras);
     cursor: pointer;
+}
+
+.button{
+    padding-top: 20px;
+    position: relative;
+}
+
+.button button{
+    position: absolute;
+    left: 210px;
+    border: 1px solid var(--letras);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--letras);
+    cursor: pointer;
+    color: var(--bg-color);
+}
+
+.card-mark{
+    background-color: var(--letras);
 }
