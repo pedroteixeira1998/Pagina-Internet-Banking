@@ -48,6 +48,8 @@ main{
 
 .calendar{
     display: flex;
+    flex-direction: column;
+    gap: 30px;
     justify-content: center;
     align-items: center;
     height: 40vh;
@@ -58,7 +60,7 @@ main{
 
 .grid{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     
 }
 
@@ -68,7 +70,8 @@ main{
 }
 
 .tb-hours{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
 }
 
 .hour, .day{
@@ -82,14 +85,20 @@ main{
     cursor: pointer;
 }
 
+.day:hover{
+    background-color: var(--letras);
+    cursor: pointer;
+}
+
 .button{
-    padding-top: 20px;
     position: relative;
 }
 
 .button button{
     position: absolute;
-    left: 210px;
+    left: 145px;
+    bottom: 10px;
+    font-size: 12pt;
     border: 1px solid var(--letras);
     padding: 10px;
     border-radius: 5px;
