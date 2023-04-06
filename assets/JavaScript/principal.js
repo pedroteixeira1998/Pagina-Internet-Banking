@@ -99,7 +99,8 @@ function selectElements(){
       localStorage.setItem('hora-marcada', selectHour);
       localStorage.setItem('dia-marcada', selectDay);
 
-      window.location = 'assets/pages/principal.html'
+      window.alert(`Sua consulta será ${selectDay} as ${selectHour} horas.`)
+      window.location = '../pages/confirmar.html'
   });
 };
 

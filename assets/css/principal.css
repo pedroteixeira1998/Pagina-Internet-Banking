@@ -110,3 +110,12 @@ main{
 .card-mark{
     background-color: var(--letras);
 }
+
+.consult{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    border: 1px solid black;
+    margin-top: 30px;
+}
