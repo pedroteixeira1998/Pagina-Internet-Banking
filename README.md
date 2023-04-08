@@ -18,6 +18,20 @@ Emite alert com a data e hora escolhida;
 
 Botão de "Marcar", salva a consulta marcada na aba "Consultas";
 
+Em construcao
+
+Pagina de cadastro
+
+chat 
+
+calendario anual
+
+tela de consultas anteriores
+
+cancelamento de consultas
+
+remarcaÇao
+
 ## Motivação
 
 Reforçar conceitos JavaScript, fazer uso do LocalStorage do navegador. Com ele consegui praticar o uso do Array e forEach que julgo essencial. 
