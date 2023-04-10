@@ -46,44 +46,27 @@ main{
     padding: 100px;
 }
 
-.calendar{
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    justify-content: center;
-    align-items: center;
-    height: 40vh;
-    width: 100vh;
-    max-width: 700px;
-    padding-top: 100px;
-}
-
-.grid{
-    display: flex;
-    flex-direction: row;
-    
-}
-
-.all-hours{
-    display: flex;
-    flex-direction: column;
-}
-
-.tb-hours{
+.calendar {
+    width: 700px;
+    height: 410px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  .weekdays, .days {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-}
-
-.hour, .day{
+    gap: 0px;
+    padding: 10px;
+  }
+  
+  .weekday, .day {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    line-height: 30px;
     border: 1px solid black;
-    padding: 30px 10px 30px 10px;
-    border-radius: 5px;
-}
-
-.hour:hover{
-    background-color: var(--letras);
-    cursor: pointer;
-}
+  }
 
 .day:hover{
     background-color: var(--letras);
@@ -96,7 +79,7 @@ main{
 
 .button button{
     position: absolute;
-    left: 145px;
+    left: 270px;
     bottom: 10px;
     font-size: 12pt;
     border: 1px solid var(--letras);

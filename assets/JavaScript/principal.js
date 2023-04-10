@@ -3,7 +3,7 @@ const spanClient = document.querySelector('.client');
 
 const btn = document.querySelector('.mark');
 const todas = document.querySelector('.all-hours');
-const grid = document.querySelector('.grid');
+var days = document.querySelector('.days');
 
 
 //Array horas
@@ -22,40 +22,21 @@ const horas = ['09:00',
 '14:30',
 '15:30'];
 
-//Array dias
-const days = ['Segunda-feira',
-'Terça-feira',
-'Quarta-feira',
-'Quinta-feira',
-'Sexta-feira'];
-
-//Criar divs
-function createdivs(){
-  for (let i = 0; i < 1; i++) {
-    const tabela = document.createElement('div');
-    tabela.classList.add('tb-hours');
-
-    for (let j = 0; j < horas.length; j++) {
-      const hour = document.createElement('div');
-      hour.classList.add('hour');
-      hour.textContent = horas[j];
-      tabela.appendChild(hour);
-    }
 
 
+// Obtenha o número de dias do mês atual
+var date = new Date();
+var month = date.getMonth();
+var year = date.getFullYear();
+var daysInMonth = new Date(year, month + 1, 0).getDate();
 
-    todas.appendChild(tabela);
-  }
-
-  for (let i = 0; i < days.length; i++) {
-    const day = document.createElement('div');
-    day.classList.add('day');
-    day.textContent = days[i];
-    grid.appendChild(day);
-  }
+// Crie as divs dos dias do mês
+for (var i = 1; i <= daysInMonth; i++) {
+  var day = document.createElement('div');
+  day.classList.add('day');
+  day.textContent = i;
+  days.appendChild(day);
 }
-
-
 
 //Selecionar Elementos
 function selectElements(){
@@ -72,34 +53,35 @@ function selectElements(){
         selectHour(hour);
       });
     });
-  const allDays = grid.querySelectorAll('.day');
-  const selectDay = (element) =>{
-    allDays.forEach(day => {
-      day.classList.remove('card-mark');
-      });
-      element.classList.add('card-mark');
   }
-  
-  
-  allDays.forEach((day => {
-    day.addEventListener('click', () => {
-      selectDay(day);
-    })
-  }))
-  
-  }
+
+// Seleciona todos os elementos do calendário que são dias
+const wdays = document.querySelectorAll('.day');
+
+// Função para adicionar a classe 'card-mark' ao dia selecionado e remover dos demais dias
+function selectDay(element) {
+  wdays.forEach(day => {
+    day.classList.remove('card-mark');
+  });
+  element.classList.add('card-mark');
+}
+
+// Adiciona um evento de clique em cada dia do calendário
+wdays.forEach(day => {
+  day.addEventListener('click', () => {
+    selectDay(day);
+  });
+});
 
   
   //Salvar Hora no LS
   function saveLs(event){
     btn.addEventListener('click', () =>{
 
-      const selectHour = todas.querySelector('.card-mark').textContent;
-      const selectDay = grid.querySelector('.card-mark').textContent;
-      localStorage.setItem('hora-marcada', selectHour);
+      const selectDay = day.querySelectorAll('.card-mark').innerHTML
       localStorage.setItem('dia-marcada', selectDay);
 
-      window.alert(`Sua consulta será ${selectDay} as ${selectHour} horas.`)
+      window.alert(`Sua consulta será dia ${selectDay}`)
       window.location = '../pages/confirmar.html'
   });
 };
@@ -107,7 +89,6 @@ function selectElements(){
 window.onload = () =>{
   spanClient.innerHTML = localStorage.getItem('client');
 
-  createdivs();
   selectElements();
   saveLs();
 }
