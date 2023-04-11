@@ -4,6 +4,7 @@ const spanClient = document.querySelector('.client');
 var days = document.querySelector('.days');
 const openModalButton = document.querySelectorAll(".mark");
 const save = document.querySelector('#save');
+const modal = document.querySelector('#modal');
 
 
 
@@ -22,6 +23,13 @@ const horas = ['09:00',
 '13:30',
 '14:30',
 '15:30'];
+
+horas.forEach(hour => {
+  const div = document.createElement('div');
+  div.classList.add('hour');
+  div.textContent = hour;
+  modal.appendChild(div);
+});
 
 
 
