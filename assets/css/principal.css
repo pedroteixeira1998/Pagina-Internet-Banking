@@ -46,21 +46,21 @@ main{
     padding: 100px;
 }
 
-.calendar {
+.calendar{
     width: 700px;
     height: 410px;
     background-color: #fff;
     border: 1px solid #ccc;
   }
   
-  .weekdays, .days {
+  .weekdays, .days, .horario {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 0px;
     padding: 10px;
   }
   
-  .weekday, .day {
+  .weekday, .day, .hour {
     width: 100%;
     height: 60px;
     text-align: center;
@@ -68,7 +68,7 @@ main{
     border: 1px solid black;
   }
 
-.day:hover{
+.day:hover, .hour:hover{
     background-color: var(--letras);
     cursor: pointer;
 }
@@ -90,6 +90,20 @@ main{
     color: var(--bg-color);
 }
 
+#modal button{
+    position: absolute;
+    left: 235px;
+    bottom: -50px;
+    font-size: 12pt;
+    border: 1px solid var(--letras);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--letras);
+    cursor: pointer;
+    color: var(--bg-color);
+} 
+
+
 .card-mark{
     background-color: var(--letras);
 }
@@ -102,3 +116,39 @@ main{
     border: 1px solid black;
     margin-top: 30px;
 }
+
+#fade,
+#modal {
+  transition: 0.5s;
+  opacity: 1;
+  pointer-events: all;
+}
+
+#fade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 5;
+  }
+
+  #modal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-width: 90%;
+    background-color: white;
+    padding: 1.2rem;
+    border-radius: 0.;
+    z-index: 10;}
+    
+    #modal.hide,
+    #fade.hide {
+      opacity: 0;
+      pointer-events: none;
+      
+    }

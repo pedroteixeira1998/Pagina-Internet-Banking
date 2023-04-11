@@ -1,9 +1,8 @@
 //Nome do Cliente
 const spanClient = document.querySelector('.client');
 
-const btn = document.querySelector('.mark');
-const todas = document.querySelector('.all-hours');
 var days = document.querySelector('.days');
+const openModalButton = document.querySelectorAll(".mark");
 
 
 //Array horas
@@ -38,25 +37,9 @@ for (var i = 1; i <= daysInMonth; i++) {
   days.appendChild(day);
 }
 
-//Selecionar Elementos
-function selectElements(){
-  const hours = todas.querySelectorAll('.hour');
-  const selectHour = (element) => {
-      hours.forEach(hour => {
-        hour.classList.remove('card-mark');
-      });
-      element.classList.add('card-mark');
-    }
-    
-    hours.forEach(hour => {
-      hour.addEventListener('click', () => {
-        selectHour(hour);
-      });
-    });
-  }
-
 // Seleciona todos os elementos do calendário que são dias
 const wdays = document.querySelectorAll('.day');
+const whorario = document.querySelectorAll('.hour');
 
 // Função para adicionar a classe 'card-mark' ao dia selecionado e remover dos demais dias
 function selectDay(element) {
@@ -66,6 +49,12 @@ function selectDay(element) {
   element.classList.add('card-mark');
 }
 
+function selectHour(element) {
+  whorario.forEach(hour => {
+    hour.classList.remove('card-mark');
+  });
+  element.classList.add('card-mark');
+}
 // Adiciona um evento de clique em cada dia do calendário
 wdays.forEach(day => {
   day.addEventListener('click', () => {
@@ -73,25 +62,24 @@ wdays.forEach(day => {
   });
 });
 
-  
-  //Salvar Hora no LS
-  function saveLs(event){
-    btn.addEventListener('click', () =>{
-
-      const selectDay = day.querySelectorAll('.card-mark').innerHTML
-      localStorage.setItem('dia-marcada', selectDay);
-
-      window.alert(`Sua consulta será dia ${selectDay}`)
-      window.location = '../pages/confirmar.html'
+whorario.forEach(hour => {
+  hour.addEventListener('click', () => {
+    selectHour(hour);
   });
-};
+});
 
+
+
+
+
+openModalButton.forEach((el) => {
+  el.addEventListener("click", () => toggleModal());
+});
 window.onload = () =>{
   spanClient.innerHTML = localStorage.getItem('client');
-
-  selectElements();
-  saveLs();
 }
+
+toggleModal();
 
 
 
