@@ -5,6 +5,8 @@ var days = document.querySelector('.days');
 const openModalButton = document.querySelectorAll(".mark");
 const save = document.querySelector('#save');
 const modal = document.querySelector('#modal');
+const weekdays = document.querySelector('.weekdays');
+
 
 
 
@@ -23,6 +25,21 @@ const horas = ['09:00',
 '13:30',
 '14:30',
 '15:30'];
+
+const weekday = ['Dom',
+'Seg',
+'Ter',
+'Qua',
+'Qui',
+'Sex',
+'Sab'];
+
+weekday.forEach(wd => {
+  const divw = document.createElement('div');
+  divw.classList.add('weekday');
+  divw.textContent = wd;
+  weekdays.appendChild(divw);
+})
 
 horas.forEach(hour => {
   const div = document.createElement('div');
