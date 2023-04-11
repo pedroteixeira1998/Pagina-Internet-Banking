@@ -3,6 +3,8 @@ const spanClient = document.querySelector('.client');
 
 var days = document.querySelector('.days');
 const openModalButton = document.querySelectorAll(".mark");
+const save = document.querySelector('#save');
+
 
 
 //Array horas
@@ -69,17 +71,33 @@ whorario.forEach(hour => {
 });
 
 
-
-
+const toggleModal = () =>{
+  modal.classList.toggle("hide");
+  fade.classList.toggle("hide");
+};
 
 openModalButton.forEach((el) => {
   el.addEventListener("click", () => toggleModal());
 });
+
+save.addEventListener('click', function() {
+  const selectedDate = document.querySelector('.day.card-mark').textContent;
+
+  const selectedHour = document.querySelector('.hour.card-mark').textContent;
+
+  localStorage.setItem('selectedDay', selectedDate);
+  localStorage.setItem('selectedHour', selectedHour);
+
+  alert(`Consulta: Dia: ${selectedDate}, as ${selectedHour} horas. Obrigado`)
+
+  window.location = '../pages/confirmar.html'
+})
+
 window.onload = () =>{
   spanClient.innerHTML = localStorage.getItem('client');
 }
 
-toggleModal();
+
 
 
 

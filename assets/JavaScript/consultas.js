@@ -5,5 +5,5 @@ const spanDay = document.querySelector('.spanday');
 
 
 spanClient.innerHTML = localStorage.getItem('client');
-spanHour.innerHTML = localStorage.getItem('hora-marcada');
-spanDay.innerHTML = localStorage.getItem('dia-marcada');
+spanHour.innerHTML = localStorage.getItem('selectedHour');
+spanDay.innerHTML = localStorage.getItem('selectedDay');
