@@ -11,6 +11,9 @@ const weekdays = document.querySelector('.weekdays');
 
 
 //Array horas
+
+let consultasMarcadas =[];
+
 const horas = ['09:00', 
 '10:00', 
 '11:00', 
@@ -105,22 +108,101 @@ openModalButton.forEach((el) => {
   el.addEventListener("click", () => toggleModal());
 });
 
+function resetPage() {
+  const selectedDay = document.querySelector('.day.card-mark');
+  const selectedHour = document.querySelector('.hour.card-mark');
+  
+  if (selectedDay) {
+    selectedDay.classList.remove('card-mark');
+  }
+  
+  if (selectedHour) {
+    selectedHour.classList.remove('card-mark');
+  }
+
+  modal.classList.add('hide');
+  fade.classList.add('hide');
+
+  
+}
+
+
+function reset(){
+  consultasMarcadas =[];
+  resetPage();
+}
+
 save.addEventListener('click', function() {
   const selectedDate = document.querySelector('.day.card-mark').textContent;
-
   const selectedHour = document.querySelector('.hour.card-mark').textContent;
+  
+  const consulta = {
+    dia: selectedDate,
+    hora: selectedHour
+  };
+
+  consultasMarcadas.push(consulta);
+
+  localStorage.setItem('consultas', JSON.stringify(consulta));
+
+  console.log(consultasMarcadas);
+
+  
 
   localStorage.setItem('selectedDay', selectedDate);
   localStorage.setItem('selectedHour', selectedHour);
 
-  alert(`Consulta: Dia: ${selectedDate}, as ${selectedHour} horas. Obrigado`)
+  const table = document.querySelector('#consultasMarcadas');
 
-  window.location = '../pages/confirmar.html'
+consultasMarcadas.forEach(consulta => {
+  const row = document.createElement('tr');
+  const cellDia = document.createElement('td');
+  const cellHora = document.createElement('td');
+  cellDia.textContent = consulta.dia;
+  cellHora.textContent = consulta.hora;
+  cellDia.classList.add('tab');
+  cellHora.classList.add('tab');
+  row.appendChild(cellDia);
+  row.appendChild(cellHora);
+  table.appendChild(row);
+
+  
+
+});
+
+
+  
+reset();
+
+
+
+  //alert(`Consulta: Dia: ${selectedDate}, as ${selectedHour} horas. Obrigado`)
+
+  //window.location = '../pages/confirmar.html'
 })
+
+const table = document.querySelector('#consultasMarcadas');
+
+consultasMarcadas.forEach(consulta => {
+  const row = document.createElement('tr');
+  const cellDia = document.createElement('td');
+  const cellHora = document.createElement('td');
+  cellDia.textContent = consulta.dia;
+  cellHora.textContent = consulta.hora;
+  row.appendChild(cellDia);
+  row.appendChild(cellHora);
+  table.appendChild(row);
+
+
+});
+
+
 
 window.onload = () =>{
   spanClient.innerHTML = localStorage.getItem('client');
 }
+
+
 
 
 
