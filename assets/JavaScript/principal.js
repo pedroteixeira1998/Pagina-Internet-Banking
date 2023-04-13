@@ -150,17 +150,36 @@ save.addEventListener('click', function() {
     const row = document.createElement('tr');
     const cellDia = document.createElement('td');
     const cellHora = document.createElement('td');
+    const cellCancel = document.createElement('td');
+    const icon = document.createElement('span');
     cellDia.textContent = consulta.dia;
     cellHora.textContent = consulta.hora;
+    icon.textContent = 'event_busy';
     cellDia.classList.add('tab');
     cellHora.classList.add('tab');
+    cellCancel.classList.add('tab');
+    icon.classList.add('material-symbols-outlined');
+    
     row.appendChild(cellDia);
     row.appendChild(cellHora);
+    row.appendChild(cellCancel);
+    cellCancel.appendChild(icon);
     table.appendChild(row);
+
+    function removeItem() {
+      const index = 1; // substitua pelo índice do item a ser removido
+      consultasMarcadas.splice(index, 1);
+      const rowToRemove = document.querySelector(`#consultasMarcadas tr:nth-child(${index + 1})`);
+      rowToRemove.remove();
+      console.log(consultasMarcadas);
+    }
+    cellCancel.addEventListener('click', removeItem)
   });
 
   reset();
 });
+
+
 
 // Criação da tabela de consultas marcadas
 const table = document.querySelector('#consultasMarcadas');
@@ -174,8 +193,6 @@ consultasMarcadas.forEach(consulta => {
   row.appendChild(cellHora);
   table.appendChild(row);
 });
-
-
 
 
 
