@@ -4,83 +4,78 @@
     width: 100%;
     background-color: var(--bg-color);
     gap: 25%;
+    }
     
-}
-
-.img-agenda img{
+    .img-agenda img{
     width: 30%;
-    padding: 0 0 0 80%;
-}
-
-.a-agenda{
+    padding-right: 80%;
+    }
+    
+    .a-agenda{
     display: flex;
     gap: 40%;
-}
-
-.a-agenda a{
+    }
+    
+    .a-agenda a{
     text-decoration: none;
     color: var(--letras);
-}
-
-.a-agenda a:hover{
+    }
+    
+    .a-agenda a:hover{
     text-decoration: underline;
-}
-
-.user-agenda{
+    }
+    
+    .user-agenda{
     border: 1px solid var(--letras);
     padding: 15px 100px 15px 15px;
     border-radius: 8px;
     background-color: var(--letras);
-}
-
-.user-agenda p, span{
-    color: var(--bg-color);
-}
-body{
-    background-color: #f0f0f0;
-}
-
-main{
+    }
     
+    .user-agenda p, span{
+    color: var(--bg-color);
+    }
+    
+    body{
+    background-color: #f0f0f0;
+    }
+    
+    main{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 100px;
-}
-
-.calendar{
+    }
+    
+    .calendar{
     width: 700px;
     height: 410px;
     background-color: #fff;
     border: 1px solid #ccc;
-  }
-  
-  .weekdays, .days, .horario {
+    }
+    
+    .weekdays, .days, .horario {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    gap: 0px;
+    gap: 0;
     padding: 10px;
-  }
-  
-  .weekday, .day, .hour {
-    width: 100%;
+    }
+    
+    .weekday, .day, .hour {
     height: 60px;
     text-align: center;
     line-height: 30px;
     border: 1px solid black;
-  }
-
-.day:hover, .hour:hover{
+    width: 100%;
+    }
+    
+    .day:hover, .hour:hover{
     background-color: var(--letras);
     cursor: pointer;
-}
-
-.button{
-    position: relative;
-}
-
-.button button{
+    }
+    
+    #modal button{
     position: absolute;
     left: 270px;
     bottom: 10px;
@@ -91,43 +86,33 @@ main{
     background-color: var(--letras);
     cursor: pointer;
     color: var(--bg-color);
-}
-
-#modal button{
-    position: absolute;
+    }
+    
+    #modal button{
     left: 235px;
     bottom: -50px;
-    font-size: 12pt;
-    border: 1px solid var(--letras);
-    padding: 10px;
-    border-radius: 5px;
+    }
+    
+    .card-mark{
     background-color: var(--letras);
-    cursor: pointer;
-    color: var(--bg-color);
-} 
-
-
-.card-mark{
-    background-color: var(--letras);
-}
-
-.consult{
+    }
+    
+    .consult{
     display: flex;
     flex-direction: column;
     gap: 15px;
     padding: 30px;
     border: 1px solid black;
     margin-top: 30px;
-}
-
-#fade,
-#modal {
-  transition: 0.5s;
-  opacity: 1;
-  pointer-events: all;
-}
-
-#fade {
+    }
+    
+    #fade, #modal {
+    transition: 0.5s;
+    opacity: 1;
+    pointer-events: all;
+    }
+    
+    #fade {
     position: fixed;
     top: 0;
     left: 0;
@@ -135,9 +120,9 @@ main{
     height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 5;
-  }
-
-  #modal {
+    }
+    
+    #modal {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -146,23 +131,21 @@ main{
     max-width: 90%;
     background-color: white;
     padding: 1.2rem;
-    border-radius: 0.;
-    z-index: 10;}
-    
-    #modal.hide,
-    #fade.hide {
-      opacity: 0;
-      pointer-events: none;
-      
+    border-radius: 0;
+    z-index: 10;
     }
-
-    .areaConsultas{
     
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: start;
+    #modal.hide, #fade.hide {
+    opacity: 0;
+    pointer-events: none;
+    }
+    
+    .areaConsultas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
     }
 
     #consultasMarcadas{
@@ -170,20 +153,21 @@ main{
         width: 700px;
         background-color: #fff;
         border: 1px solid #ccc;
-        
-            
-          
-    }
-
+    }    
+      
     #consultasMarcadas td{
         border: 1px solid black;
         padding: 10px 300px 10px 10px;
+    }    
         
-        
-    }
-
-
     .tab{
         border: 1px solid black;
         text-align: start;
-    }
+    } 
+
+
+           
+          
+    
+
+  
