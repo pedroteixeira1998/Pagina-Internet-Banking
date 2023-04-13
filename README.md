@@ -28,23 +28,20 @@ Calendário anual;
 
 Tela de consultas anteriores;
 
-Cancelamento de consultas;
-
 Remarcação;
 
 ## Motivação
 
 Reforçar conceitos JavaScript, fazer uso do LocalStorage do navegador. Com ele consegui praticar o uso do Array e forEach que julgo essencial. 
 
-## Tecnologias
+## Desenvolvido com
 
-HTML;
+![image](https://user-images.githubusercontent.com/124098830/228688209-dddcd457-c70b-4673-9a37-094e14a0b09e.png)
+![image](https://user-images.githubusercontent.com/124098830/228688219-325fcbc4-a36f-41e5-a60e-dafe0045e6e4.png)
+![image](https://user-images.githubusercontent.com/124098830/228688228-296088c5-7637-4f55-acd4-dfd2606ce9f5.png)
 
-CSS;
+## Fotos
 
-JavaScript;
-
-## Fotos;
 ![1](https://user-images.githubusercontent.com/124098830/230467770-12e76a3e-2b46-477e-912a-7bf394de1c60.jpeg)
 ![2](https://user-images.githubusercontent.com/124098830/230467791-776d81d4-3eb8-43b6-8d1a-794e4ab7f21d.jpeg)
 ![3](https://user-images.githubusercontent.com/124098830/230467826-4f0922eb-f9bb-499c-b945-24f1456dc4e4.jpeg)
