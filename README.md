@@ -26,9 +26,9 @@ Chat;
 
 Calendário anual;
 
-Tela de consultas anteriores;
+Construindo no momento - Tela de consultas anteriores;
 
-Remarcação;
+Construindo no momento - Remarcação;
 
 ## Motivação
 
