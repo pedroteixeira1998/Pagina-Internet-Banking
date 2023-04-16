@@ -18,17 +18,17 @@ Emite alert com a data e hora escolhida;
 
 Botão de "Marcar", salva a consulta marcada na aba "Consultas";
 
-Em construcao:
+Construindo no momento - Tela de consultas anteriores;
+
+Construindo no momento - Remarcação;
+
+Em breve:
 
 Página de cadastro;
 
 Chat; 
 
 Calendário anual;
-
-Construindo no momento - Tela de consultas anteriores;
-
-Construindo no momento - Remarcação;
 
 ## Motivação
 
