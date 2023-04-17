@@ -20,8 +20,6 @@ Projeto em construção;
 
 💉⚙️ Construindo no momento - Tela de consultas anteriores;
 
-💉⚙️ Construindo no momento - Remarcação;
-
 Em breve:
 
 ⚙️ Página de cadastro;
