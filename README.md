@@ -4,31 +4,31 @@
 
 Projeto em construção;
 
-Página para agendamento de consultas médicas;
+🩺 Página para agendamento de consultas médicas;
 
-Página de Login com validações de e-mail e senha;
+🩺 Página de Login com validações de e-mail e senha;
 
-Opção de mostrar e esconder senha;
+🩺 Opção de mostrar e esconder senha;
 
 ### Página Principal:
 
-Escolher apenas um dia e uma hora (Evitar erros e duplicidades);
+💉 Escolher apenas um dia e uma hora (Evitar erros e duplicidades);
 
-Emite alert com a data e hora escolhida;
+💉 Emite alert com a data e hora escolhida;
 
-Botão de "Marcar", salva a consulta marcada na aba "Consultas";
+💉 Botão de "Marcar", salva a consulta marcada na aba "Consultas";
 
-Construindo no momento - Tela de consultas anteriores;
+💉⚙️ Construindo no momento - Tela de consultas anteriores;
 
-Construindo no momento - Remarcação;
+💉⚙️ Construindo no momento - Remarcação;
 
 Em breve:
 
-Página de cadastro;
+⚙️ Página de cadastro;
 
-Chat; 
+⚙️ Chat; 
 
-Calendário anual;
+⚙️ Calendário anual;
 
 ## Motivação
 
