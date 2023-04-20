@@ -45,7 +45,7 @@ Reforçar conceitos JavaScript, fazer uso do LocalStorage do navegador. Com ele 
 ![WhatsApp Image 2023-04-13 at 18 37 19](https://user-images.githubusercontent.com/124098830/231888718-daed39e3-6747-4195-9742-d3e5e9c41c89.jpeg)
 ![WhatsApp Image 2023-04-13 at 18 37 56](https://user-images.githubusercontent.com/124098830/231888704-2654cffc-beaa-4f11-88c3-466cc523093b.jpeg)
 
-## link: 
+## Deploy: 
 
 https://pedroteixeira1998.github.io/Pagina-agendamento-medico/
 
